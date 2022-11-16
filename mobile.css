@@ -1,6 +1,6 @@
 @media screen and (max-width:851px) {
     .swiper-slide img{
-        height: 20rem;
+        height: 10rem;
     }
     .starter{
         display: none;
@@ -17,5 +17,14 @@
     .mobilesearch{
         display: flex;
         align-items: center;
+    }
+    .show{
+        display: none;
+    }
+    .swiper-slide img{
+        width: 100%;
+    }
+    .container-wide{
+        display: flex;
     }
 }

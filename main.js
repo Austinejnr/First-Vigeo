@@ -27,3 +27,23 @@ function addandremove (){
     hamburger.classList.toggle('showburger')
     mobilelinkscontainer.classList.toggle('showmobilelinks')
 }
+
+
+new Swiper ("#swiper-2", {
+    slidesPerView: 1.5,
+    centeredSlides: true,
+    spaceBetween: 24,
+    lazyLoading: true,
+    loop: true,
+    keyboard: {
+        enabled: true
+    },
+    pagination: {
+        el: "#swiper-1 .swiper-pagination",
+        clickable: true
+},
+    navigation: {
+        nextEl: "#nav-right",
+        prevEl: "#nav-left "
+    }
+})
