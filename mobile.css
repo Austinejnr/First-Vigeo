@@ -1,0 +1,11 @@
+@media screen and (max-width:851px) {
+    .swiper-slide img{
+        height: 20rem;
+    }
+    .starter{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+}
