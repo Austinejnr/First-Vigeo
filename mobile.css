@@ -27,4 +27,7 @@
     .container-wide{
         display: flex;
     }
+    .arrow{
+        cursor: none;
+    }
 }
