@@ -11,6 +11,9 @@
 body{
     font-family: 'Merriweather Sans', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 .starter{
     display: flex;
     background: #0000FF;
@@ -19,22 +22,34 @@ body{
 }
 .first{
     width: 50%;
-    color: #fff;
+    color: var(--white);
     display: flex;
     align-items: center;
     font-family: 'Merriweather Sans', sans-serif;
     /* justify-content: space-between; */
 }
+.first h2{
+    padding-left: 20px;
+}
 .link {
-    display: flex;
     width: 50%;
+}
+.link ul {
+    display: flex;
     justify-content: space-evenly;
+    list-style: none;
     font-family: 'Signika Negative', sans-serif;
 }
-.link a {
-    color: #fff;
+.link a{
     text-decoration: none;
-    list-style: none;
+    color: var(--white);
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+    line-height: 25px;
+}
+.link a:hover{
+    background: var(--white);
+    color: var(--theme);
 }
 .search{
     /* border: 2px solid #1F51FF; */
@@ -56,36 +71,127 @@ body{
 .search button{
     cursor: pointer;
     padding: 10px 10px;
-    background: #1F51FF;
+    background: var(--theme);
     font-size: 15px;
     margin-left: 20px;
     border-radius: 5px;
-    color: #fff;
+    color: var(--white);
+    transition: all 0.8s ease-in-out;
 }
-.mobilestarter{
+.search button:hover{
+    background: var(--white);
+    color: var(--theme);
+}
+.mobile{
     display: none;
+    /* border: 3px solid purple; */
     background: var(--theme);
-    color: #fff;
 }
-.mobilefirst{
+.nav-brand{
+    /* border: 3px solid tomato; */
+    /* height: 100px; */
+    width: 300px;
+}
+.nav-brand .logo{
     display: flex;
     align-items: center;
+    color: var(--white);
 }
-.mobilefirst h2{
-    padding-left: 100px;
-    font-size: 30px;
-    width: 50%;
+.nav-brand .logo h2{
+    padding-left: 20px;
+}
+.hamburger-container{
+    /* border: 3px solid red; */
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+.menu{
+    width: 100%;
+    background: var(--white);
+    height: 3px;
+    position: relative;
+}
+.menu::before{
+    content: '';
+    background: var(--white);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    transition: all 0.8s ease;
+
+    transform: translateY(-10px);
+}
+.menu::after{
+    content: '';
+    background: var(--white);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    transition: all 0.8s ease;
+
+    transform: translateY(10px);
+}
+.showburger .menu{
+    background: transparent;
+}
+.showburger .menu::before{
+    transition: all 0.8s ease;
+    transform: rotate(45deg);
+    background: var(--theme);
+}
+.showburger .menu::after{
+    transition: all 0.8s ease;
+    transform: rotate(-45deg);
+    background: var(--theme);
+}
+.mobilelinks-container{
+    transform: translateX(102%);
+    transition: all 2s ease;
+    /* display: none; */
+    width: 70%;
+    height: 100%;
+    background: var(--theme);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    margin-top: 25px;
+}
+.showmobilelinks{
+    /* display: block; */
+    transform: translateX(0);
+    transition: all 2s ease;
+}
+.mobilelinks-content ul{
+    list-style: none;
+}
+.mobilelinks-content a{
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px 20px;
+}
+.mobilelinks-content a:hover{
+    background: var(--white);
+    color: var(--theme);
+}
+.mobilelinks-content .active-link{
+    background: var(--white);
+    color: var(--theme);
 }
 .mobilesearch{
     padding: 8px 0;
     display: none;
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
-    color: #1F51FF;
+    /* color: #1F51FF; */
 }
 .mobilesearch input{
     padding: 8px;
-    width: 600px;
+    width: 400px;
     outline: none;
     margin: 5px 0;
     font-size: 15px; 
@@ -95,10 +201,14 @@ body{
 .mobilesearch button{
     padding: 8px;
     margin-left: 15px;
-    background: #1F51FF;
+    background: var(--theme);
     font-size: 15px;
     border-radius: 5px;
     color: #fff;
+}
+.mobilesearch button:hover{
+    color: var(--theme);
+    background: var(--white);
 }
 .show{
     background: var(--blue);
@@ -107,7 +217,7 @@ body{
     display: block;
     width: 70%;
     margin: 0 auto;
-    height: 40rem;
+    height: 30rem;
     object-fit: cover;
 }
 #swiper-1 .swiper-pagination{

@@ -8,8 +8,11 @@
     .search{
         display: none;
     }
-    .mobilestarter{
+    .mobile{
         display: flex;
+        justify-content: space-between;
+        padding: 10px 10px;
+        align-items: center;
     }
     .mobilesearch{
         display: flex;

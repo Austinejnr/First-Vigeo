@@ -16,3 +16,14 @@ new Swiper ("#swiper-1", {
         enabled: true
     },
 })
+
+var hamburger = document.querySelector(".hamburger-container")
+var mobilelinkscontainer = document.querySelector(".mobilelinks-container")
+
+console.log(hamburger)
+
+
+function addandremove (){
+    hamburger.classList.toggle('showburger')
+    mobilelinkscontainer.classList.toggle('showmobilelinks')
+}
