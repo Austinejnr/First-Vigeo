@@ -8,4 +8,11 @@
     .search{
         display: none;
     }
+    .mobilestarter{
+        display: flex;
+    }
+    .mobilesearch{
+        display: flex;
+        align-items: center;
+    }
 }

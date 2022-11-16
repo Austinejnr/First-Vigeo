@@ -60,8 +60,10 @@ body{
     font-size: 15px;
     margin-left: 20px;
     border-radius: 5px;
+    color: #fff;
 }
 .mobilestarter{
+    display: none;
     background: var(--theme);
     color: #fff;
 }
@@ -70,10 +72,33 @@ body{
     align-items: center;
 }
 .mobilefirst h2{
-    padding-left: 20px;
+    padding-left: 100px;
     font-size: 30px;
-    text-align: center;
     width: 50%;
+}
+.mobilesearch{
+    padding: 8px 0;
+    display: none;
+    width: 60%;
+    margin: 0 auto;
+    color: #1F51FF;
+}
+.mobilesearch input{
+    padding: 8px;
+    width: 600px;
+    outline: none;
+    margin: 5px 0;
+    font-size: 15px; 
+    border-radius: 5px; 
+    border: 2px solid #1F51FF;
+}
+.mobilesearch button{
+    padding: 8px;
+    margin-left: 15px;
+    background: #1F51FF;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #fff;
 }
 .show{
     background: var(--blue);
