@@ -220,7 +220,7 @@ html{
     display: block;
     width: 70%;
     margin: 0 auto;
-    height: 60rem;
+    height: 30rem;
     object-fit: cover;
 }
 #swiper-1 .swiper-pagination{
